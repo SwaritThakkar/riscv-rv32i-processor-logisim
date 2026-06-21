@@ -26,12 +26,12 @@ JAR = "/Applications/Logisim-evolution.app/Contents/app/logisim-evolution-4.1.0-
 WORK = "/tmp/limg"           # space-free working dir
 MAXD = 2800
 SCALE = "3.0"
-# neon "synthwave PCB" palette on near-black, finished with a glow/bloom pass
-BGFLOOR = (5, 7, 16)     # deep blue-black background floor
-COMP = (224, 234, 255)   # components / gates / text  (ice white)
-WIRE = (34, 232, 255)    # wires / buses              (neon cyan)
-PIN  = (255, 74, 158)    # input/output pins & labels (hot magenta)
-GLOW = 0.6               # bloom strength
+# "Matrix" palette — all-green phosphor neon on near-black, with glow/bloom
+BGFLOOR = (2, 10, 4)     # deep green-black background floor
+COMP = (158, 255, 170)   # components / gates / text  (pale phosphor green)
+WIRE = (0, 230, 70)      # wires / buses              (bright matrix green)
+PIN  = (180, 255, 120)   # input/output pins & labels (lime highlight)
+GLOW = 0.65              # bloom strength
 
 # locate a JDK (bundled VS Code Java extension, else PATH)
 _cands = glob.glob(os.path.expanduser(
