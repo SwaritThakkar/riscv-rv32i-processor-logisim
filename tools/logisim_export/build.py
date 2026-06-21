@@ -26,10 +26,12 @@ JAR = "/Applications/Logisim-evolution.app/Contents/app/logisim-evolution-4.1.0-
 WORK = "/tmp/limg"           # space-free working dir
 MAXD = 2800
 SCALE = "3.0"
-# vivid "PCB layout" palette on pure black
-COMP = (226, 232, 240)   # components / gates / text  (light steel, near white)
-WIRE = (45, 212, 233)    # wires / buses              (cyan)
-PIN  = (250, 204, 21)    # input/output pins & labels (yellow)
+# neon "synthwave PCB" palette on near-black, finished with a glow/bloom pass
+BGFLOOR = (5, 7, 16)     # deep blue-black background floor
+COMP = (224, 234, 255)   # components / gates / text  (ice white)
+WIRE = (34, 232, 255)    # wires / buses              (neon cyan)
+PIN  = (255, 74, 158)    # input/output pins & labels (hot magenta)
+GLOW = 0.6               # bloom strength
 
 # locate a JDK (bundled VS Code Java extension, else PATH)
 _cands = glob.glob(os.path.expanduser(
@@ -57,8 +59,8 @@ def darken():
     black; brightness tracks how 'inky' the source pixel was, so anti-aliased
     edges fade smoothly into the black background (no colour halos)."""
     import numpy as np
-    from PIL import Image
-    PAD = 26
+    from PIL import Image, ImageFilter
+    PAD = 30
     for f in sorted(glob.glob(WORK + "/out/*.png")):
         name = os.path.basename(f)
         a = np.asarray(Image.open(f).convert("RGB")).astype(np.float32)
@@ -68,12 +70,18 @@ def darken():
         is_pin = (B > R + 45) & (B > G + 45)                  # blue pins/labels
         is_wire = (~is_pin) & (g > 70) & (g < 205)            # grey wires/buses
         is_comp = (~is_pin) & (~is_wire)                      # black components/text
-        out = np.zeros(a.shape, np.float32)
+        elem = np.zeros(a.shape, np.float32)                  # elements on black
         for mask, col in ((is_comp, COMP), (is_wire, WIRE), (is_pin, PIN)):
             for c in range(3):
-                out[..., c] = np.where(mask, col[c] * ink, out[..., c])
+                elem[..., c] = np.where(mask, col[c] * ink, elem[..., c])
+        base = Image.fromarray(np.clip(elem, 0, 255).astype("uint8"), "RGB")
+        # neon bloom: add blurred copies of the bright elements back on top
+        glow_s = np.asarray(base.filter(ImageFilter.GaussianBlur(4))).astype(np.float32)
+        glow_l = np.asarray(base.filter(ImageFilter.GaussianBlur(13))).astype(np.float32)
+        floor = np.array(BGFLOOR, np.float32)
+        out = elem + GLOW * glow_s + (GLOW * 0.7) * glow_l + floor
         img = Image.fromarray(np.clip(out, 0, 255).astype("uint8"), "RGB")
-        bbox = img.getbbox()
+        bbox = base.getbbox()
         if bbox:
             l, t, r, b = bbox
             img = img.crop((max(0, l - PAD), max(0, t - PAD),

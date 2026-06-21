@@ -1,5 +1,9 @@
 # RISC-V RV32I Microprocessor in Logisim-Evolution
 
+<p align="center">
+  <img src="docs/images/CPU.png" alt="RV32I single-cycle CPU datapath" width="100%"/>
+</p>
+
 This repository is the submission for **DAC-102 / DAE-101 (2026), Project 2** at the
 Mehta Family School of Data Science & Artificial Intelligence, IIT Roorkee. It contains a
 fully working **single-cycle RISC-V processor** that executes the complete `RV32I` base
