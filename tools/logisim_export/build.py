@@ -44,27 +44,54 @@ def render_exports():
                    cwd=WORK, check=True)
 
 
+# refined dark-slate theme (clean, not neon)
+BG   = (13, 19, 32)      # dark slate canvas
+GRID = (32, 44, 64)      # subtle dot grid
+COMP = (228, 234, 244)   # components / gates / text  (soft white)
+WIRE = (122, 150, 184)   # wires / buses              (cool steel)
+PIN  = (240, 184, 80)    # input / output pins        (warm amber)
+
+
 def finish():
-    """Clean up the Logisim export for a crisp white-paper look:
-      - boost contrast (Logisim draws floating wires in faint grey ~128; a gamma
-        curve darkens those to readable near-black while keeping pure black
-        components, white background and blue pins intact),
-      - auto-crop to content so nothing is clipped,
-      - downscale very large sheets."""
+    """Recolour each white Logisim export to a clean dark-slate theme.
+
+    Logisim draws components in black, floating wires in grey(~128), the canvas
+    dot-grid in light grey(~216) and pins in blue. We classify every pixel by
+    those source tones and paint it on a dark slate canvas; line brightness
+    tracks the source ink so anti-aliased edges fade into the background with no
+    halos. Then auto-crop to content and downscale very large sheets."""
     import numpy as np
-    from PIL import Image, ImageChops
+    from PIL import Image
     PAD = 30
-    GAMMA = 1.6   # mild: darkens faint grey wires, keeps the dot grid light
-    lut = (((np.arange(256) / 255.0) ** GAMMA) * 255.0).astype(np.float32)
+    bg = np.array(BG, np.float32)
     for f in sorted(glob.glob(WORK + "/out/*.png")):
         name = os.path.basename(f)
-        a = np.asarray(Image.open(f).convert("RGB")).astype(np.uint8)
-        out = lut[a].astype("uint8")              # per-channel gamma -> darker wires
-        img = Image.fromarray(out, "RGB")
-        bg = Image.new("RGB", img.size, (255, 255, 255))
-        bbox = ImageChops.difference(img, bg).getbbox()       # content box (incl. labels)
-        if bbox:
-            l, t, r, b = bbox
+        a = np.asarray(Image.open(f).convert("RGB")).astype(np.float32)
+        R, G, B = a[..., 0], a[..., 1], a[..., 2]
+        g = (R + G + B) / 3.0
+        is_pin = (B > R + 45) & (B > G + 45)
+        ink = np.clip((255.0 - g) / 255.0, 0, 1)                 # darkness of source
+        out = np.tile(bg, a.shape[:2] + (1,))
+
+        def blend(mask, target, weight):
+            t = np.array(target, np.float32)
+            wgt = (mask * weight)[..., None]
+            return out * (1 - wgt) + t * wgt
+
+        comp = (~is_pin) & (g < 90)
+        wire = (~is_pin) & (g >= 90) & (g < 196)
+        grid = (~is_pin) & (g >= 196) & (g < 250)
+        out = blend(grid, GRID, np.clip((250.0 - g) / 54.0, 0, 1) * 0.7)
+        out = blend(wire, WIRE, ink)
+        out = blend(comp, COMP, ink)
+        out = blend(is_pin, PIN, np.clip(ink * 1.4, 0, 1))
+        img = Image.fromarray(np.clip(out, 0, 255).astype("uint8"), "RGB")
+
+        # crop to content: anything that differs from the flat background
+        diff = np.abs(np.asarray(img).astype(np.int16) - BG).sum(2)
+        ys, xs = np.where(diff > 18)
+        if len(xs):
+            l, r, t, b = xs.min(), xs.max(), ys.min(), ys.max()
             img = img.crop((max(0, l - PAD), max(0, t - PAD),
                             min(img.width, r + PAD), min(img.height, b + PAD)))
         w, h = img.size
