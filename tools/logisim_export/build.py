@@ -44,12 +44,12 @@ def render_exports():
                    cwd=WORK, check=True)
 
 
-# refined dark-slate theme (clean, not neon)
-BG   = (13, 19, 32)      # dark slate canvas
-GRID = (32, 44, 64)      # subtle dot grid
-COMP = (228, 234, 244)   # components / gates / text  (soft white)
-WIRE = (122, 150, 184)   # wires / buses              (cool steel)
-PIN  = (240, 184, 80)    # input / output pins        (warm amber)
+# data-viz dashboard theme: deep blue-black, vivid sky-blue lines, amber accents
+BG   = (10, 13, 22)      # deep blue-black canvas     (#0A0D16)
+GRID = (24, 33, 54)      # subtle blue-grey dot grid
+COMP = (232, 238, 247)   # components / gates / text  (soft white)
+WIRE = (91, 200, 245)    # wires / buses              (vivid sky blue #5BC8F5)
+PIN  = (240, 184, 75)    # input / output pins        (warm amber #F0B84B)
 
 
 def finish():
