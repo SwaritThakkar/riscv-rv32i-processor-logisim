@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" font-family="SFMono-Regular,Consolas,Menlo,monospace">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arrowc" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#f0883e"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#10141b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+
+  <!-- title -->
+  <text x="40" y="52" fill="#e6edf3" font-size="30" font-weight="700">Single-Cycle RV32I Datapath</text>
+  <text x="40" y="78" fill="#8b949e" font-size="15">PC &#8594; Instruction Fetch &#8594; Decode &#8594; Execute &#8594; Memory &#8594; Write-Back &#8212; one instruction per clock</text>
+
+  <!-- legend -->
+  <g font-size="12">
+    <rect x="980" y="34" width="14" height="14" rx="3" fill="#1f6feb"/><text x="1000" y="46" fill="#8b949e">datapath</text>
+    <rect x="1080" y="34" width="14" height="14" rx="3" fill="#bb8009"/><text x="1100" y="46" fill="#8b949e">compute</text>
+    <rect x="1180" y="34" width="14" height="14" rx="3" fill="#8957e5"/><text x="1200" y="46" fill="#8b949e">memory</text>
+  </g>
+
+  <!-- ===================== BLOCKS ===================== -->
+  <!-- PC -->
+  <g>
+    <rect x="40" y="300" width="78" height="70" rx="10" fill="#1f6feb" stroke="#79c0ff" stroke-width="2"/>
+    <text x="79" y="332" fill="#fff" font-size="16" font-weight="700" text-anchor="middle">PC</text>
+    <text x="79" y="352" fill="#cfe2ff" font-size="10" text-anchor="middle">program</text>
+    <text x="79" y="364" fill="#cfe2ff" font-size="10" text-anchor="middle">counter</text>
+  </g>
+
+  <!-- Instruction Memory -->
+  <g>
+    <rect x="170" y="290" width="120" height="90" rx="10" fill="#8957e5" stroke="#d2a8ff" stroke-width="2"/>
+    <text x="230" y="328" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Instruction</text>
+    <text x="230" y="346" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Memory</text>
+    <text x="230" y="366" fill="#e9d8ff" font-size="10" text-anchor="middle">ROM &#183; 32-bit</text>
+  </g>
+
+  <!-- Control Unit -->
+  <g>
+    <rect x="360" y="70" width="150" height="70" rx="10" fill="#9e6a03" stroke="#e3b341" stroke-width="2"/>
+    <text x="435" y="100" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">Control Unit</text>
+    <text x="435" y="120" fill="#ffe9c2" font-size="10" text-anchor="middle">opcode &#8594; signals</text>
+  </g>
+
+  <!-- Immediate Generator -->
+  <g>
+    <rect x="360" y="470" width="150" height="70" rx="10" fill="#1f6feb" stroke="#79c0ff" stroke-width="2"/>
+    <text x="435" y="500" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">Immediate Gen</text>
+    <text x="435" y="520" fill="#cfe2ff" font-size="10" text-anchor="middle">I/S/B/U/J formats</text>
+  </g>
+
+  <!-- Register File -->
+  <g>
+    <rect x="360" y="270" width="150" height="120" rx="10" fill="#1f6feb" stroke="#79c0ff" stroke-width="2"/>
+    <text x="435" y="305" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">Register File</text>
+    <text x="435" y="326" fill="#cfe2ff" font-size="10" text-anchor="middle">32 &#215; 32-bit</text>
+    <text x="435" y="344" fill="#cfe2ff" font-size="10" text-anchor="middle">x0 hard-wired 0</text>
+    <text x="435" y="368" fill="#cfe2ff" font-size="10" text-anchor="middle">2 read / 1 write</text>
+  </g>
+
+  <!-- ALU Control -->
+  <g>
+    <rect x="565" y="190" width="120" height="56" rx="10" fill="#9e6a03" stroke="#e3b341" stroke-width="2"/>
+    <text x="625" y="214" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">ALU Control</text>
+    <text x="625" y="232" fill="#ffe9c2" font-size="10" text-anchor="middle">funct3/funct7</text>
+  </g>
+
+  <!-- ALU -->
+  <g>
+    <rect x="600" y="290" width="120" height="100" rx="10" fill="#bb8009" stroke="#f0c674" stroke-width="2"/>
+    <text x="660" y="332" fill="#fff" font-size="17" font-weight="700" text-anchor="middle">ALU</text>
+    <text x="660" y="352" fill="#fff6e0" font-size="10" text-anchor="middle">add sub and or xor</text>
+    <text x="660" y="366" fill="#fff6e0" font-size="10" text-anchor="middle">sll srl sra slt sltu</text>
+  </g>
+
+  <!-- Branch Comparator -->
+  <g>
+    <rect x="600" y="430" width="120" height="60" rx="10" fill="#bb8009" stroke="#f0c674" stroke-width="2"/>
+    <text x="660" y="456" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">Branch</text>
+    <text x="660" y="474" fill="#fff6e0" font-size="11" text-anchor="middle">Comparator</text>
+  </g>
+
+  <!-- Data Memory -->
+  <g>
+    <rect x="800" y="290" width="130" height="100" rx="10" fill="#8957e5" stroke="#d2a8ff" stroke-width="2"/>
+    <text x="865" y="328" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">Data Memory</text>
+    <text x="865" y="348" fill="#e9d8ff" font-size="10" text-anchor="middle">RAM &#183; byte/half/word</text>
+    <text x="865" y="366" fill="#e9d8ff" font-size="10" text-anchor="middle">lb lh lw lbu lhu / sb sh sw</text>
+  </g>
+
+  <!-- Write-back MUX -->
+  <g>
+    <path d="M1000 300 h26 v26 l-26 14 z M1000 300 v80 l26 -14 v-26 z" fill="#1a7f37" stroke="#56d364" stroke-width="2"/>
+    <text x="1013" y="296" fill="#8b949e" font-size="11" text-anchor="middle">WB</text>
+    <text x="1013" y="345" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">M</text>
+    <text x="1013" y="360" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">U</text>
+    <text x="1013" y="375" fill="#fff" font-size="12" font-weight="700" text-anchor="middle">X</text>
+  </g>
+
+  <!-- PC adders / next PC mux -->
+  <g>
+    <rect x="170" y="170" width="86" height="46" rx="8" fill="#bb8009" stroke="#f0c674" stroke-width="2"/>
+    <text x="213" y="198" fill="#fff" font-size="13" font-weight="700" text-anchor="middle">PC + 4</text>
+  </g>
+  <g>
+    <rect x="600" y="150" width="92" height="30" rx="8" fill="#bb8009" stroke="#f0c674" stroke-width="1.6"/>
+    <text x="646" y="170" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">PC + imm</text>
+  </g>
+  <g>
+    <path d="M120 150 h22 v22 l-22 12 z M120 150 v68 l22 -12 v-22 z" fill="#1a7f37" stroke="#56d364" stroke-width="2"/>
+    <text x="131" y="146" fill="#8b949e" font-size="10" text-anchor="middle">nextPC</text>
+  </g>
+
+  <!-- ===================== WIRES ===================== -->
+  <g stroke="#58a6ff" stroke-width="2.4" fill="none">
+    <!-- PC -> IMEM -->
+    <path d="M118 335 H170" marker-end="url(#arrow)"/>
+    <!-- IMEM -> regfile (instruction fields) -->
+    <path d="M290 330 H360" marker-end="url(#arrow)"/>
+    <!-- IMEM -> control (opcode) -->
+    <path d="M250 290 V105 H360" marker-end="url(#arrow)"/>
+    <!-- IMEM -> immgen -->
+    <path d="M250 380 V505 H360" marker-end="url(#arrow)"/>
+    <!-- regfile read data1 -> ALU a -->
+    <path d="M510 320 H560 V330 H600" marker-end="url(#arrow)"/>
+    <!-- regfile read data2 -> ALU b (via ALUSrc mux, simplified) -->
+    <path d="M510 360 H600" marker-end="url(#arrow)"/>
+    <!-- immgen -> ALU b -->
+    <path d="M510 505 H560 V372 H600" marker-end="url(#arrow)"/>
+    <!-- ALU -> data mem addr -->
+    <path d="M720 335 H800" marker-end="url(#arrow)"/>
+    <!-- regfile rd2 -> data mem write data -->
+    <path d="M540 388 V410 H760 V372 H800" marker-end="url(#arrow)"/>
+    <!-- ALU result -> WB mux -->
+    <path d="M720 312 H760 V312 H1000" marker-end="url(#arrow)"/>
+    <!-- data mem -> WB mux -->
+    <path d="M930 350 H1000" marker-end="url(#arrow)"/>
+    <!-- WB mux -> regfile write data -->
+    <path d="M1026 340 H1060 V620 H300 V378 H360" marker-end="url(#arrow)"/>
+    <!-- regfile -> branch comparator -->
+    <path d="M510 372 V450 H600" marker-end="url(#arrow)"/>
+    <!-- PC -> PC+4 -->
+    <path d="M79 300 V193 H170" marker-end="url(#arrow)"/>
+    <!-- PC+4 -> nextPC mux -->
+    <path d="M170 193 H156 V165 H142" marker-end="url(#arrow)"/>
+    <!-- PC+imm -> nextPC mux -->
+    <path d="M600 165 H520 V250 H150 V178 H142" marker-end="url(#arrow)"/>
+    <!-- nextPC mux -> PC -->
+    <path d="M131 218 V260 H30 V335 H40" marker-end="url(#arrow)"/>
+    <!-- immgen -> PC+imm adder -->
+    <path d="M460 470 V165 H600" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- control signals (orange dashed) -->
+  <g stroke="#f0883e" stroke-width="1.8" fill="none" stroke-dasharray="5 4">
+    <path d="M435 140 V200 H565" marker-end="url(#arrowc)"/>            <!-- ctrl->alu control aluop -->
+    <path d="M450 140 V268" marker-end="url(#arrowc)"/>                  <!-- ctrl->regfile regwrite -->
+    <path d="M625 246 V290" marker-end="url(#arrowc)"/>                  <!-- alu control -> alu -->
+    <path d="M495 140 V285 H600" marker-end="url(#arrowc)"/>            <!-- alu control inputs from instr -->
+    <path d="M660 490 V560 H131 V218" marker-end="url(#arrowc)"/>       <!-- branch decision -> nextPC mux -->
+    <path d="M490 140 V285" marker-end="url(#arrowc)"/>
+    <path d="M1013 380 V400 H950 V300" marker-end="url(#arrowc)"/>      <!-- memtoreg -> WB mux -->
+  </g>
+
+  <text x="40" y="690" fill="#6e7681" font-size="12">Orange = control signals (dashed) &#183; Blue = data path. Simplified for clarity; see the full Logisim schematic for exact wiring.</text>
+</svg>

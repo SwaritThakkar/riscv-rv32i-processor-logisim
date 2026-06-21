@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="366 445 608 300" width="608" height="300" font-family="SFMono-Regular,Consolas,monospace">
+<rect x="366" y="445" width="608" height="300" fill="#0d1117"/>
+<g opacity="0.5">
+<line x1="350" y1="445" x2="350" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="400" y1="445" x2="400" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="450" y1="445" x2="450" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="500" y1="445" x2="500" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="550" y1="445" x2="550" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="600" y1="445" x2="600" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="650" y1="445" x2="650" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="700" y1="445" x2="700" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="750" y1="445" x2="750" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="800" y1="445" x2="800" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="850" y1="445" x2="850" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="900" y1="445" x2="900" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="950" y1="445" x2="950" y2="745" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="400" x2="974" y2="400" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="450" x2="974" y2="450" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="500" x2="974" y2="500" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="550" x2="974" y2="550" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="600" x2="974" y2="600" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="650" x2="974" y2="650" stroke="#161b22" stroke-width="1"/>
+<line x1="366" y1="700" x2="974" y2="700" stroke="#161b22" stroke-width="1"/>
+</g>
+<text x="388" y="479" fill="#e6edf3" font-size="26" font-weight="700">ALU_Control</text>
+<text x="388" y="501" fill="#8b949e" font-size="13">RV32I CPU &#183; Logisim-Evolution schematic</text>
+<g stroke-linecap="round">
+<line x1="470" y1="530" x2="490" y2="530" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="470" y1="580" x2="560" y2="580" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="470" y1="660" x2="490" y2="660" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="490" y1="530" x2="490" y2="570" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="490" y1="570" x2="560" y2="570" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="490" y1="590" x2="490" y2="660" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="490" y1="590" x2="560" y2="590" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="820" y1="650" x2="870" y2="650" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+</g>
+<rect x="435" y="505" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="470" y="535" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">funct3</text>
+<rect x="426" y="555" width="88" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="470" y="585" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">funct7_5</text>
+<rect x="435" y="635" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="470" y="665" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">alu_op</text>
+<rect x="567" y="565" width="26" height="70" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="580" y="605" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">Splitter</text>
+<rect x="826" y="625" width="88" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="870" y="655" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">alu_ctrl</text>
+<rect x="514" y="551" width="132" height="78" rx="6" fill="#8957e5" stroke="#d2a8ff" stroke-width="2"/>
+<text x="580" y="595" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">read_only_memory</text>
+</svg>

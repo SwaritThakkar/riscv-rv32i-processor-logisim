@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="205 375 738 410" width="738" height="410" font-family="SFMono-Regular,Consolas,monospace">
+<rect x="205" y="375" width="738" height="410" fill="#0d1117"/>
+<g opacity="0.5">
+<line x1="200" y1="375" x2="200" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="250" y1="375" x2="250" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="300" y1="375" x2="300" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="350" y1="375" x2="350" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="400" y1="375" x2="400" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="450" y1="375" x2="450" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="500" y1="375" x2="500" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="550" y1="375" x2="550" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="600" y1="375" x2="600" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="650" y1="375" x2="650" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="700" y1="375" x2="700" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="750" y1="375" x2="750" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="800" y1="375" x2="800" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="850" y1="375" x2="850" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="900" y1="375" x2="900" y2="785" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="350" x2="943" y2="350" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="400" x2="943" y2="400" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="450" x2="943" y2="450" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="500" x2="943" y2="500" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="550" x2="943" y2="550" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="600" x2="943" y2="600" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="650" x2="943" y2="650" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="700" x2="943" y2="700" stroke="#161b22" stroke-width="1"/>
+<line x1="205" y1="750" x2="943" y2="750" stroke="#161b22" stroke-width="1"/>
+</g>
+<text x="227" y="409" fill="#e6edf3" font-size="26" font-weight="700">Control_Unit</text>
+<text x="227" y="431" fill="#8b949e" font-size="13">RV32I CPU &#183; Logisim-Evolution schematic</text>
+<g stroke-linecap="round">
+<line x1="300" y1="470" x2="410" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="410" y1="470" x2="410" y2="510" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="410" y1="510" x2="420" y2="510" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="660" y1="560" x2="670" y2="560" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="670" y1="550" x2="670" y2="560" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="460" x2="830" y2="460" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="470" x2="820" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="480" x2="810" y2="480" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="490" x2="800" y2="490" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="500" x2="790" y2="500" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="510" x2="780" y2="510" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="520" x2="770" y2="520" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="530" x2="760" y2="530" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="690" y1="540" x2="750" y2="540" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="750" y1="540" x2="750" y2="700" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="750" y1="700" x2="830" y2="700" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="760" y1="530" x2="760" y2="670" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="760" y1="670" x2="820" y2="670" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="770" y1="520" x2="770" y2="640" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="770" y1="640" x2="830" y2="640" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="780" y1="510" x2="780" y2="610" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="780" y1="610" x2="830" y2="610" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="790" y1="500" x2="790" y2="580" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="790" y1="580" x2="830" y2="580" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="800" y1="490" x2="800" y2="550" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="800" y1="550" x2="830" y2="550" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="810" y1="480" x2="810" y2="520" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="810" y1="520" x2="830" y2="520" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="820" y1="470" x2="820" y2="490" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+<line x1="820" y1="490" x2="830" y2="490" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
+</g>
+<rect x="265" y="445" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="300" y="475" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">opcode</text>
+<rect x="657" y="515" width="26" height="70" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="670" y="555" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">Splitter</text>
+<rect x="781" y="645" width="79" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="820" y="675" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">imm_sel</text>
+<rect x="782" y="435" width="97" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="465" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">reg_write</text>
+<rect x="791" y="465" width="79" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="495" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">alu_src</text>
+<rect x="782" y="495" width="97" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="525" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">mem_write</text>
+<rect x="795" y="525" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="555" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">alu_op</text>
+<rect x="777" y="555" width="106" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="585" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">mem_to_reg</text>
+<rect x="786" y="585" width="88" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="615" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">mem_read</text>
+<rect x="795" y="615" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="645" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">branch</text>
+<rect x="804" y="675" width="52" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
+<text x="830" y="705" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">jump</text>
+<rect x="354" y="461" width="132" height="78" rx="6" fill="#8957e5" stroke="#d2a8ff" stroke-width="2"/>
+<text x="420" y="505" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">read_only_mem</text>
+</svg>
