@@ -45,13 +45,22 @@ def render_exports():
 
 
 def finish():
-    """Keep the raw Logisim export (white background, authentic colours); just
-    auto-crop to actual content so nothing is clipped, and downscale huge sheets."""
+    """Clean up the Logisim export for a crisp white-paper look:
+      - boost contrast (Logisim draws floating wires in faint grey ~128; a gamma
+        curve darkens those to readable near-black while keeping pure black
+        components, white background and blue pins intact),
+      - auto-crop to content so nothing is clipped,
+      - downscale very large sheets."""
+    import numpy as np
     from PIL import Image, ImageChops
     PAD = 30
+    GAMMA = 2.1
+    lut = (((np.arange(256) / 255.0) ** GAMMA) * 255.0).astype(np.float32)
     for f in sorted(glob.glob(WORK + "/out/*.png")):
         name = os.path.basename(f)
-        img = Image.open(f).convert("RGB")
+        a = np.asarray(Image.open(f).convert("RGB")).astype(np.uint8)
+        out = lut[a].astype("uint8")              # per-channel gamma -> darker wires
+        img = Image.fromarray(out, "RGB")
         bg = Image.new("RGB", img.size, (255, 255, 255))
         bbox = ImageChops.difference(img, bg).getbbox()       # content box (incl. labels)
         if bbox:
