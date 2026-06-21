@@ -41,7 +41,56 @@ gates — easy to read, verify and extend.
 
 ## 3. Top-level datapath
 
-![Architecture](images/architecture.svg)
+```mermaid
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#070A12",
+    "primaryColor": "#111827",
+    "primaryTextColor": "#D8DDF5",
+    "primaryBorderColor": "#64748B",
+    "lineColor": "#9CA3AF",
+    "secondaryColor": "#172033",
+    "tertiaryColor": "#0F172A",
+    "fontFamily": "Inter, Arial, sans-serif"
+  }
+}}%%
+flowchart LR
+    PC[PC] --> IM[Instruction Memory]
+    IM --> RF[Register File]
+    IM -->|opcode| CU[Control Unit]
+    IM -->|imm bits| IG[Immediate Generator]
+    RF -->|rs1| ALU[ALU]
+    RF -->|rs2 / imm| ALU
+    IG --> ALU
+    IG --> AT[PC + imm]
+    RF --> BC[Branch Comparator]
+    ALU -->|address| DM[Data Memory]
+    RF -->|store data| DM
+    ALU --> WB[Write-Back MUX]
+    DM --> WB
+    WB -->|write data| RF
+    PC --> A4[PC + 4]
+    PC --> AT
+    A4 --> NPC[next-PC MUX]
+    AT --> NPC
+    NPC --> PC
+    CU -.->|alu_op| AC[ALU Control]
+    AC -.->|alu_ctrl| ALU
+    CU -.->|branch / jump| NPC
+    BC -.->|taken| NPC
+
+    classDef pc   fill:#1E1B4B,stroke:#60A5FA,stroke-width:2px,color:#E0F2FE;
+    classDef mem  fill:#123524,stroke:#6EE7B7,stroke-width:2px,color:#DCFCE7;
+    classDef ctrl fill:#3B2F0B,stroke:#FFD34D,stroke-width:2px,color:#FEF3C7;
+    classDef comp fill:#3B1D0B,stroke:#F97316,stroke-width:2px,color:#FFEDD5;
+    classDef mux  fill:#4A102A,stroke:#F43F5E,stroke-width:2px,color:#FFE4E6;
+    class PC pc;
+    class IM,RF,DM mem;
+    class CU,AC ctrl;
+    class ALU,BC,A4,AT comp;
+    class WB,NPC mux;
+```
 
 The single clock cycle proceeds conceptually through five stages, all active
 simultaneously within the cycle:
@@ -64,10 +113,6 @@ Finally, the **next-PC** multiplexer chooses between `PC + 4` (sequential), the 
 `jal` target (`PC + immediate`), or the `jalr` target, based on `branch`, `jump` and the
 branch-comparator result.
 
-The complete, as-wired top-level schematic:
-
-![CPU datapath](images/CPU.svg)
-
 ---
 
 ## 4. Module-by-module description
@@ -77,14 +122,14 @@ A 32-bit `Register` with a multiplexer on its input for synchronous **reset** (c
 PC to 0) and a clock input. On each rising clock edge it latches `next_pc`. This is the
 only architectural state on the fetch path.
 
-![PC](images/PC.svg)
+![PC](images/PC.png)
 
 ### 4.2 Instruction Memory (`Instruction_Memory`)
 A 32-bit-wide `ROM` addressed by the PC. RV32I instructions are word-aligned, so the ROM
 is indexed by the upper PC bits. It is purely combinational — the instruction appears as
 soon as the address is stable.
 
-![Instruction Memory](images/Instruction_Memory.svg)
+![Instruction Memory](images/Instruction_Memory.png)
 
 ### 4.3 Control Unit (`Control_Unit`)
 The main decoder. A 7-bit opcode addresses a ROM whose 12-bit output is split (via a
@@ -115,7 +160,7 @@ Decode entries exist for all nine RV32I opcode groups:
 | `0x37` | LUI | load upper immediate (ALU pass-through) |
 | `0x17` | AUIPC | add upper immediate to PC |
 
-![Control Unit](images/Control_Unit.svg)
+![Control Unit](images/Control_Unit.png)
 
 ### 4.4 Immediate Generator (`Imediate_Generator`)
 RV32I scatters immediate bits differently across each format. This unit uses splitters and
@@ -130,7 +175,7 @@ the correct format via `imm_sel`:
 | `011` | U-type | `lui`, `auipc` |
 | `100` | J-type | `jal` |
 
-![Immediate Generator](images/Imediate_Generator.svg)
+![Immediate Generator](images/Imediate_Generator.png)
 
 ### 4.5 Register File (`Register_File`)
 32 architectural registers, each 32 bits. Implemented as **31 hardware `Register`s** plus
@@ -139,7 +184,7 @@ the correct format via `imm_sel`:
 produces 31 individual write-enable strobes. Two large multiplexers form the `rs1` and
 `rs2` read ports. Writes are clocked; reads are combinational.
 
-![Register File](images/Register_File.svg)
+![Register File](images/Register_File.png)
 
 ### 4.6 ALU Control (`ALU_Control`)
 A ROM addressed by `{alu_op[1:0], funct7[5], funct3[2:0]}` (6 bits) that emits the 4-bit
@@ -153,7 +198,7 @@ A ROM addressed by `{alu_op[1:0], funct7[5], funct3[2:0]}` (6 bits) that emits t
 | `10` | Decode fully from `funct3`/`funct7` (R-type and I-type ALU) |
 | `11` | Pass-through / upper-immediate path (`lui`) |
 
-![ALU Control](images/ALU_Control.svg)
+![ALU Control](images/ALU_Control.png)
 
 ### 4.7 Arithmetic Logic Unit (`ALU`)
 The compute core. It contains a dedicated functional block for each operation —
@@ -172,7 +217,7 @@ and a final multiplexer that selects the result according to the 4-bit `alu_ctrl
 
 A separate comparator drives the `zero` output, used by the branch logic.
 
-![ALU](images/ALU.svg)
+![ALU](images/ALU.png)
 
 ### 4.8 Branch Comparator (`Branch_Comparator`)
 Takes `rs1`, `rs2` and `funct3` and produces a single `branch_taken` bit implementing the
@@ -180,7 +225,7 @@ six branch conditions (`beq`, `bne`, `blt`, `bge`, `bltu`, `bgeu`) using signed 
 unsigned comparators plus a small amount of selection logic. Gating this with the
 `branch` control signal decides whether the next-PC mux takes the branch target.
 
-![Branch Comparator](images/Branch_Comparator.svg)
+![Branch Comparator](images/Branch_Comparator.png)
 
 ### 4.9 Data Memory (`Data_Memory`)
 A word-addressed `RAM` with full sub-word support. On the read path, `funct3` selects
@@ -189,7 +234,7 @@ between byte / half / word and signed / unsigned extension (`lb`, `lh`, `lw`, `l
 byte-enable / merge for `sb`, `sh`, `sw`. Reads are combinational; writes are clocked and
 gated by `mem_write`.
 
-![Data Memory](images/Data_Memory.svg)
+![Data Memory](images/Data_Memory.png)
 
 ---
 

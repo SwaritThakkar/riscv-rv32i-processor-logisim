@@ -1,148 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="498 58 974 634" width="974" height="634" font-family="SFMono-Regular,Consolas,monospace">
-<rect x="498" y="58" width="974" height="634" fill="#0d1117"/>
-<g opacity="0.5">
-<line x1="450" y1="58" x2="450" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="500" y1="58" x2="500" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="550" y1="58" x2="550" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="600" y1="58" x2="600" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="650" y1="58" x2="650" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="700" y1="58" x2="700" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="750" y1="58" x2="750" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="800" y1="58" x2="800" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="850" y1="58" x2="850" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="900" y1="58" x2="900" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="950" y1="58" x2="950" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1000" y1="58" x2="1000" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1050" y1="58" x2="1050" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1100" y1="58" x2="1100" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1150" y1="58" x2="1150" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1200" y1="58" x2="1200" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1250" y1="58" x2="1250" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1300" y1="58" x2="1300" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1350" y1="58" x2="1350" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1400" y1="58" x2="1400" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="1450" y1="58" x2="1450" y2="692" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="50" x2="1472" y2="50" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="100" x2="1472" y2="100" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="150" x2="1472" y2="150" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="200" x2="1472" y2="200" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="250" x2="1472" y2="250" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="300" x2="1472" y2="300" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="350" x2="1472" y2="350" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="400" x2="1472" y2="400" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="450" x2="1472" y2="450" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="500" x2="1472" y2="500" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="550" x2="1472" y2="550" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="600" x2="1472" y2="600" stroke="#161b22" stroke-width="1"/>
-<line x1="498" y1="650" x2="1472" y2="650" stroke="#161b22" stroke-width="1"/>
-</g>
-<text x="520" y="92" fill="#e6edf3" font-size="26" font-weight="700">Branch_Comparator</text>
-<text x="520" y="114" fill="#8b949e" font-size="13">RV32I CPU &#183; Logisim-Evolution schematic</text>
-<g stroke-linecap="round">
-<line x1="1080" y1="190" x2="1230" y2="190" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1080" y1="220" x2="1220" y2="220" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1080" y1="250" x2="1210" y2="250" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1080" y1="280" x2="1200" y2="280" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1080" y1="310" x2="1190" y2="310" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1080" y1="340" x2="1250" y2="340" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1190" y1="310" x2="1190" y2="330" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1190" y1="330" x2="1250" y2="330" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1200" y1="280" x2="1200" y2="320" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1200" y1="320" x2="1250" y2="320" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1210" y1="250" x2="1210" y2="310" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1210" y1="310" x2="1250" y2="310" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1220" y1="220" x2="1220" y2="280" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1220" y1="280" x2="1250" y2="280" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="190" x2="1230" y2="270" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="270" x2="1250" y2="270" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="290" x2="1230" y2="300" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="290" x2="1250" y2="290" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="300" x2="1230" y2="380" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1230" y1="300" x2="1250" y2="300" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1270" y1="350" x2="1270" y2="410" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="1290" y1="310" x2="1350" y2="310" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="590" y1="140" x2="660" y2="140" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="590" y1="190" x2="660" y2="190" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="600" y1="300" x2="640" y2="300" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="600" y1="410" x2="650" y2="410" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="610" y1="610" x2="680" y2="610" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="640" y1="300" x2="640" y2="320" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="640" y1="320" x2="640" y2="390" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="640" y1="320" x2="730" y2="320" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="640" y1="390" x2="680" y2="390" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="650" y1="340" x2="650" y2="410" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="650" y1="340" x2="730" y2="340" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="650" y1="410" x2="670" y2="410" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="670" y1="410" x2="670" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="670" y1="470" x2="730" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="680" y1="390" x2="680" y2="450" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="680" y1="450" x2="730" y2="450" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="690" y1="140" x2="720" y2="140" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="690" y1="190" x2="740" y2="190" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="710" y1="610" x2="740" y2="610" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="770" y1="330" x2="810" y2="330" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="770" y1="340" x2="810" y2="340" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="770" y1="470" x2="790" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="790" y1="460" x2="790" y2="470" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="790" y1="460" x2="800" y2="460" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="810" y1="310" x2="810" y2="330" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="810" y1="310" x2="830" y2="310" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="810" y1="340" x2="810" y2="350" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-<line x1="810" y1="350" x2="830" y2="350" stroke="#58a6ff" stroke-width="2.4" opacity="0.85"/>
-</g>
-<circle cx="1230" cy="300" r="3.2" fill="#58a6ff"/>
-<circle cx="650" cy="410" r="3.2" fill="#58a6ff"/>
-<circle cx="640" cy="320" r="3.2" fill="#58a6ff"/>
-<rect x="1060" y="177" width="40" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="194" fill="#7ee787" font-size="12" text-anchor="middle">eq</text>
-<rect x="1060" y="207" width="40" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="224" fill="#7ee787" font-size="12" text-anchor="middle">ne</text>
-<rect x="1037" y="237" width="86" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="254" fill="#7ee787" font-size="12" text-anchor="middle">lt_signed</text>
-<rect x="1037" y="267" width="86" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="284" fill="#7ee787" font-size="12" text-anchor="middle">ge_signed</text>
-<rect x="1029" y="297" width="102" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="314" fill="#7ee787" font-size="12" text-anchor="middle">lt_unsigned</text>
-<rect x="1029" y="327" width="102" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="1080" y="344" fill="#7ee787" font-size="12" text-anchor="middle">ge_unsigned</text>
-<rect x="1198" y="365" width="64" height="30" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
-<text x="1230" y="385" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">const</text>
-<rect x="1235" y="385" width="70" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
-<text x="1270" y="415" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">funct3</text>
-<rect x="1288" y="285" width="124" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
-<text x="1350" y="315" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">branch_taken</text>
-<rect x="547" y="127" width="86" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="590" y="144" fill="#7ee787" font-size="12" text-anchor="middle">lt_signed</text>
-<rect x="570" y="177" width="40" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="590" y="194" fill="#7ee787" font-size="12" text-anchor="middle">eq</text>
-<rect x="577" y="275" width="46" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
-<text x="600" y="305" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">a</text>
-<rect x="577" y="385" width="46" height="50" rx="6" fill="#238636" stroke="#56d364" stroke-width="2"/>
-<text x="600" y="415" fill="#fff" font-size="13" font-weight="600" text-anchor="middle">b</text>
-<rect x="559" y="597" width="102" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="610" y="614" fill="#7ee787" font-size="12" text-anchor="middle">lt_unsigned</text>
-<rect x="677" y="127" width="86" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="720" y="144" fill="#7ee787" font-size="12" text-anchor="middle">ge_singed</text>
-<rect x="720" y="177" width="40" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="740" y="194" fill="#7ee787" font-size="12" text-anchor="middle">ne</text>
-<rect x="689" y="597" width="102" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="740" y="614" fill="#7ee787" font-size="12" text-anchor="middle">ge_unsigned</text>
-<rect x="749" y="447" width="102" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="800" y="464" fill="#7ee787" font-size="12" text-anchor="middle">lt_unsigned</text>
-<rect x="810" y="297" width="40" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="830" y="314" fill="#7ee787" font-size="12" text-anchor="middle">eq</text>
-<rect x="787" y="337" width="86" height="26" rx="13" fill="#21262d" stroke="#444c56" stroke-width="1.2"/>
-<text x="830" y="354" fill="#7ee787" font-size="12" text-anchor="middle">lt_signed</text>
-<rect x="660" y="118" width="60" height="44" rx="6" fill="#6e7681" stroke="#b1bac4" stroke-width="2"/>
-<text x="690" y="145" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">NOT</text>
-<rect x="660" y="168" width="60" height="44" rx="6" fill="#6e7681" stroke="#b1bac4" stroke-width="2"/>
-<text x="690" y="195" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">NOT</text>
-<rect x="680" y="588" width="60" height="44" rx="6" fill="#6e7681" stroke="#b1bac4" stroke-width="2"/>
-<text x="710" y="615" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">NOT</text>
-<rect x="1251" y="282" width="78" height="56" rx="6" fill="#1a7f37" stroke="#56d364" stroke-width="2"/>
-<text x="1290" y="315" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">MUX</text>
-<rect x="731" y="302" width="78" height="56" rx="6" fill="#bb8009" stroke="#f0c674" stroke-width="2"/>
-<text x="770" y="335" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">CMP</text>
-<rect x="731" y="432" width="78" height="56" rx="6" fill="#bb8009" stroke="#f0c674" stroke-width="2"/>
-<text x="770" y="465" fill="#fff" font-size="12" font-weight="500" text-anchor="middle">CMP</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 520" width="1080" height="520" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif">
+<defs>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.45"/></filter>
+<marker id="ar-data" markerWidth="10" markerHeight="10" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#7C8BA1"/></marker>
+<marker id="ar-ctrl" markerWidth="10" markerHeight="10" refX="7.5" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#F97316"/></marker>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0 L0 0 0 40" fill="none" stroke="#1B2740" stroke-width="1"/></pattern>
+<linearGradient id="bgg" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0" stop-color="#070A12"/><stop offset="1" stop-color="#0E1626"/></linearGradient>
+</defs>
+<rect width="1080" height="520" fill="url(#bgg)"/>
+<rect width="1080" height="520" fill="url(#grid)" opacity="0.5"/>
+<rect x="40" y="34" width="34" height="6" rx="3" fill="#38BDF8"/>
+<text x="40" y="74" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="30" font-weight="750" fill="#F8FAFC">Branch Comparator</text>
+<text x="40" y="100" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="14.5" fill="#9CA3AF">Evaluates the six RV32I branch conditions</text>
+<rect x="60" y="190" width="85" height="30" rx="15" fill="#123524" stroke="#6EE7B7" stroke-width="1.5"/>
+<text x="102.5" y="209.5" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="600" fill="#DCFCE7">a (rs1)</text>
+<rect x="145.0" y="196" width="28" height="18" rx="9" fill="#111827" stroke="#38BDF8" stroke-width="1" opacity="0.95"/>
+<text x="159" y="209" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" fill="#38BDF8">32</text>
+<rect x="60" y="250" width="85" height="30" rx="15" fill="#123524" stroke="#6EE7B7" stroke-width="1.5"/>
+<text x="102.5" y="269.5" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="600" fill="#DCFCE7">b (rs2)</text>
+<rect x="145.0" y="256" width="28" height="18" rx="9" fill="#111827" stroke="#38BDF8" stroke-width="1" opacity="0.95"/>
+<text x="159" y="269" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" fill="#38BDF8">32</text>
+<rect x="60" y="320" width="76" height="30" rx="15" fill="#123524" stroke="#6EE7B7" stroke-width="1.5"/>
+<text x="98.0" y="339.5" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="600" fill="#DCFCE7">funct3</text>
+<rect x="140.0" y="326" width="20" height="18" rx="9" fill="#111827" stroke="#38BDF8" stroke-width="1" opacity="0.95"/>
+<text x="150" y="339" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" fill="#38BDF8">3</text>
+<rect x="320" y="175" width="150" height="80" rx="14" fill="#3B1D0B" stroke="#F97316" stroke-width="1.6" filter="url(#soft)"/>
+<text x="395.0" y="211.0" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="16" font-weight="650" fill="#FFEDD5">Comparators</text>
+<text x="395.0" y="231.0" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="11.5" fill="#D9AE8A">signed + unsigned</text>
+<rect x="320" y="300" width="150" height="70" rx="14" fill="#08304A" stroke="#38BDF8" stroke-width="1.6" filter="url(#soft)"/>
+<text x="395.0" y="331.0" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="16" font-weight="650" fill="#E0F2FE">Condition MUX</text>
+<text x="395.0" y="351.0" text-anchor="middle" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="11.5" fill="#8FC4DD">funct3 select</text>
+<path d="M 145 205 L 278.0 205.0 Q 290 205 301.4 208.8 L 320 215.0 " fill="none" stroke="#38BDF8" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-data)"/>
+<path d="M 145 265 L 278.0 265.0 Q 290 265 290.0 253.0 L 290.0 242.0 Q 290 230 300.0 223.3 L 320 210.0 " fill="none" stroke="#38BDF8" stroke-width="3.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-data)"/>
+<path d="M 136 335 L 320 335.0 " fill="none" stroke="#64748B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-data)"/>
+<path d="M 395.0 255 L 395.0 268.0 Q 395 280 395.0 290.0 L 395.0 300 " fill="none" stroke="#64748B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-data)"/>
+<rect x="560" y="320" width="130" height="30" rx="15" fill="#3B1D0B" stroke="#F97316" stroke-width="1.5"/>
+<text x="625.0" y="339.5" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" font-weight="600" fill="#FFEDD5">branch_taken</text>
+<path d="M 470 335.0 L 560 335 " fill="none" stroke="#64748B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar-data)"/>
+<rect x="760" y="165" width="270" height="210" rx="12" fill="#111827" stroke="#64748B" stroke-width="1.5" filter="url(#soft)"/>
+<text x="776" y="189" font-family="Inter, 'Helvetica Neue', 'Segoe UI', system-ui, Arial, sans-serif" font-size="13" font-weight="700" fill="#D8DDF5">branch conditions</text>
+<text x="776" y="211" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">beq   a == b</text>
+<text x="776" y="230" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">bne   a != b</text>
+<text x="776" y="249" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">blt   a &lt;  b   (signed)</text>
+<text x="776" y="268" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">bge   a &gt;= b   (signed)</text>
+<text x="776" y="287" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">bltu  a &lt;  b   (unsigned)</text>
+<text x="776" y="306" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="12.5" fill="#D8DDF5">bgeu  a &gt;= b   (unsigned)</text>
 </svg>
