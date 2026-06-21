@@ -50,6 +50,21 @@ public class Export {
       g.setRenderingHint(RenderingHints.KEY_STROKE_CONTROL, RenderingHints.VALUE_STROKE_PURE);
       g.setColor(Color.WHITE);
       g.fillRect(0, 0, w, h);
+
+      // Logisim canvas dot grid: light dots on the 10-unit lattice (device 1px)
+      g.setColor(new Color(0xD8, 0xD8, 0xDE));
+      final int gx0 = (int) (Math.floor(bds.getX() / 10.0) * 10);
+      final int gy0 = (int) (Math.floor(bds.getY() / 10.0) * 10);
+      final int gx1 = bds.getX() + bds.getWidth();
+      final int gy1 = bds.getY() + bds.getHeight();
+      for (int lx = gx0; lx <= gx1; lx += 10) {
+        final int dx = (int) Math.round((lx - bds.getX()) * scale);
+        for (int ly = gy0; ly <= gy1; ly += 10) {
+          final int dy = (int) Math.round((ly - bds.getY()) * scale);
+          g.fillRect(dx, dy, 1, 1);
+        }
+      }
+
       g.setColor(Color.BLACK);
       g.scale(scale, scale);
       g.translate(-bds.getX(), -bds.getY());

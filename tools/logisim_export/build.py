@@ -54,7 +54,7 @@ def finish():
     import numpy as np
     from PIL import Image, ImageChops
     PAD = 30
-    GAMMA = 2.1
+    GAMMA = 1.6   # mild: darkens faint grey wires, keeps the dot grid light
     lut = (((np.arange(256) / 255.0) ** GAMMA) * 255.0).astype(np.float32)
     for f in sorted(glob.glob(WORK + "/out/*.png")):
         name = os.path.basename(f)
