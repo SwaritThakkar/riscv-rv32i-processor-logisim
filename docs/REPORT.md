@@ -295,14 +295,17 @@ each `alu_ctrl` code, and that the immediate generator sign-extends each format 
 
 ## 8. How to reproduce the schematics
 
-All schematic images in this report are generated programmatically from the `.circ` file
-(component coordinates, wires and labels) by [`tools/render_circuits.py`](../tools/render_circuits.py):
+Every figure in this report is the **real circuit**, rendered straight from
+`RV32I_CPU.circ` with Logisim-Evolution's own drawing engine (the same code path as
+*File > Export Image*) and then recoloured to the dark theme:
 
 ```bash
-python3 tools/render_circuits.py RV32I_CPU.circ docs/images
+python3 tools/logisim_export/build.py
 ```
 
-This guarantees the figures match the actual circuit rather than a hand-drawn idealisation.
+`Export.java` loads the `.circ`, calls `circuit.draw(...)` for each subcircuit, and writes
+a PNG; `build.py` then inverts and navy-tints each export. This guarantees the figures
+match the actual circuit exactly, rather than a hand-drawn idealisation.
 
 ---
 

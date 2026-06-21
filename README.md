@@ -122,6 +122,15 @@ flowchart LR
     class WB,NPC mux;
 ```
 
+The figure below is the **actual top-level circuit**, rendered straight from
+`RV32I_CPU.circ` with Logisim-Evolution's own drawing engine and then recoloured
+to the vivid dark theme (see [`tools/logisim_export/`](tools/logisim_export/) —
+white = components, cyan = wires/buses, yellow = pins). Every block is one of the
+ten subcircuits, wired into the datapath through named tunnels (`instruction`,
+`imm_out`, `alu_result`, …).
+
+![CPU datapath](docs/images/CPU.png)
+
 | Stage | Subcircuits | Job |
 |-------|-------------|-----|
 | **Fetch** | `PC`, `Instruction_Memory` | Hold the program counter, read the 32-bit instruction, compute `PC+4`. |
@@ -153,9 +162,12 @@ of the nine RV32I opcode groups (`0x03 0x13 0x17 0x23 0x33 0x37 0x63 0x67 0x6F`)
 
 ## 4. Module reference
 
-Each subcircuit below is drawn as a self-contained block diagram showing its ports
-(green = input, orange = output, rose = control, grey = clock/reset), internal functional
-blocks, and the data buses (cyan) and control lines (orange) between them.
+Every schematic below is the real subcircuit, exported directly from
+`RV32I_CPU.circ` with Logisim-Evolution and recoloured to the vivid dark theme —
+so what you see is exactly what is wired in the `.circ`. In the colour scheme,
+**white** is components (adder, subtractor, `A<B` comparators, shifters,
+bit-extenders, ROM/RAM, multiplexers and named tunnels), **cyan** is the
+wires and buses, and **yellow** marks the circuit's input/output pins.
 
 ### Arithmetic Logic Unit
 Computes every RV32I integer operation. A bank of dedicated functional blocks feeds a
@@ -255,10 +267,11 @@ machine code and how to assemble your own program.
 ├── docs/
 │   ├── REPORT.md             # full project report and design write-up
 │   ├── Project2_Assignment.pdf
-│   └── images/               # dark-theme schematics of every subcircuit (SVG + PNG)
+│   └── images/               # dark-theme renders of every subcircuit (PNG)
 ├── programs/                 # demo program: assembly, machine code, notes
 ├── tools/
-│   └── render_diagrams.py    # generates the module schematics in this README
+│   └── logisim_export/       # Export.java + build.py: render the .circ to the
+│                             # dark-theme images used in these docs
 ├── README.md
 └── LICENSE
 ```
