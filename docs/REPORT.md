@@ -297,15 +297,16 @@ each `alu_ctrl` code, and that the immediate generator sign-extends each format 
 
 Every figure in this report is the **real circuit**, rendered straight from
 `RV32I_CPU.circ` with Logisim-Evolution's own drawing engine (the same code path as
-*File > Export Image*) and then recoloured to the dark theme:
+*File > Export Image*), so it matches the Logisim editor canvas exactly:
 
 ```bash
 python3 tools/logisim_export/build.py
 ```
 
-`Export.java` loads the `.circ`, calls `circuit.draw(...)` for each subcircuit, and writes
-a PNG; `build.py` then inverts and navy-tints each export. This guarantees the figures
-match the actual circuit exactly, rather than a hand-drawn idealisation.
+`Export.java` loads the `.circ`, draws the canvas grid, calls `circuit.draw(...)` for each
+subcircuit and writes a PNG; `build.py` auto-crops each image to its content so pin labels
+are never clipped. This guarantees the figures match the actual circuit exactly, rather
+than a hand-drawn idealisation.
 
 ---
 

@@ -126,12 +126,11 @@ flowchart LR
     class WB,NPC mux;
 ```
 
-The figure below is the **actual top-level circuit**, rendered straight from
-`RV32I_CPU.circ` with Logisim-Evolution's own drawing engine and then recoloured
-to the vivid dark theme (see [`tools/logisim_export/`](tools/logisim_export/) —
-white = components, cyan = wires/buses, yellow = pins). Every block is one of the
-ten subcircuits, wired into the datapath through named tunnels (`instruction`,
-`imm_out`, `alu_result`, …).
+The figure below is the **actual top-level circuit**, exported straight from
+`RV32I_CPU.circ` with Logisim-Evolution's own drawing engine
+(see [`tools/logisim_export/`](tools/logisim_export/)) — the same view as the
+Logisim editor canvas. Every block is one of the ten subcircuits, wired into the
+datapath through named tunnels (`instruction`, `imm_out`, `alu_result`, …).
 
 ![CPU datapath](docs/images/CPU.png)
 
@@ -167,11 +166,10 @@ of the nine RV32I opcode groups (`0x03 0x13 0x17 0x23 0x33 0x37 0x63 0x67 0x6F`)
 ## 4. Module reference
 
 Every schematic below is the real subcircuit, exported directly from
-`RV32I_CPU.circ` with Logisim-Evolution and recoloured to the vivid dark theme —
-so what you see is exactly what is wired in the `.circ`. In the colour scheme,
-**white** is components (adder, subtractor, `A<B` comparators, shifters,
-bit-extenders, ROM/RAM, multiplexers and named tunnels), **cyan** is the
-wires and buses, and **yellow** marks the circuit's input/output pins.
+`RV32I_CPU.circ` with Logisim-Evolution — exactly what you see on the editor
+canvas. Boxes are components (adder, subtractor, `A<B` comparators, shifters,
+bit-extenders, ROM/RAM, multiplexers), framed labels are named tunnels, and the
+blue labels are the circuit's input/output pins.
 
 ### Arithmetic Logic Unit
 Computes every RV32I integer operation. A bank of dedicated functional blocks feeds a
